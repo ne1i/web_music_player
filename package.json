@@ -5,6 +5,7 @@
     "@tailwindcss/cli": "^4.1.11",
     "@types/bun": "latest",
     "@types/react-dom": "^19.1.6",
+    "htmx.org": "^2.0.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.11"

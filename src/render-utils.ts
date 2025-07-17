@@ -30,6 +30,7 @@ export function html(
     ...init,
     headers: {
       "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "no-store", // fixes cache messing up reloading
       ...init?.headers,
     },
   });
