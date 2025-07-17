@@ -1,12 +1,24 @@
 {
   "name": "web_music_player",
   "module": "index.ts",
-  "type": "module",
-  "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@tailwindcss/cli": "^4.1.11",
+    "@types/bun": "latest",
+    "@types/react-dom": "^19.1.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11"
   },
   "peerDependencies": {
     "typescript": "^5"
-  }
+  },
+  "private": true,
+  "scripts": {
+    "dev:server": "bun run --hot --inspect=localhost:6499/debug src/index.ts",
+    "dev:css": "tailwindcss -i ./src/app.css -o ./public/app.css --watch",
+    "build": "bun run src/index.ts",
+    "build:css": "tailwindcss -i ./src/app.css -o ./public/app.css",
+    "build:server": "bun build --target=bun ./src/index.ts --outfile=build/index.js"
+  },
+  "type": "module"
 }
