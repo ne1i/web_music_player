@@ -1,5 +1,5 @@
 import { renderWithLayout } from "./render-utils";
-import NotFound from "./pages/404";
+import NotFoundPage from "./pages/404";
 
 export async function serveStatic(
   request: Request,
@@ -8,7 +8,7 @@ export async function serveStatic(
   console.info("Serving file", request.url);
   const path = rootDir + new URL(request.url).pathname;
   const response = await servePath(path);
-  return response ?? renderWithLayout(NotFound({ request }));
+  return response ?? renderWithLayout(NotFoundPage({ request }));
 }
 
 export async function servePath(path: string) {
